@@ -15,11 +15,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
- * @author chenjw
- * @version v1.0.0
- * @description
- * @date Created in 2018/8/3 10:17
- */
+ * @author: create by XiaoHan
+ * @version: v1.0
+ * @description: hospitalServer.bean
+ * @date:2020/3/27
+ **/
 @Controller
 @RequestMapping("/uus")
 public class UserController {
@@ -28,18 +28,9 @@ public class UserController {
 
     private  static final Logger LOG = Logger.getLogger(UserController.class);
     @RequestMapping("/get.do")
-    public ModelAndView showUser(){
-        System.out.println("uuuuuu");
-//        User u = uService.showUser("1");
+    public void showUser(){
         List<User> u = uService.showUser();
-        ModelAndView mv = new ModelAndView();
-        mv.addObject("users",u);
-        mv.setViewName("itemDetail");
-
         System.out.println(u.toString());
 //        LOG.info("....==>"+u[0].getName());
-
-        return mv;
-
     }
 }

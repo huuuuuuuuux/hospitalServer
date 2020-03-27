@@ -9,11 +9,11 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * @author chenjw
- * @version v1.0.0
- * @description
- * @date Created in 2018/8/3 10:15
- */
+ * @author: create by XiaoHan
+ * @version: v1.0
+ * @description: hospitalServer.bean
+ * @date:2020/3/27
+ **/
 @Service
 public class UserServiceImpl implements UserService{
     @Autowired
