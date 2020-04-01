@@ -21,13 +21,13 @@ import java.util.List;
  * @date:2020/3/27
  **/
 @Controller
-@RequestMapping("/uus")
+@RequestMapping("/user")
 public class UserController {
     @Autowired
     private UserService uService;
 
     private  static final Logger LOG = Logger.getLogger(UserController.class);
-    @RequestMapping("/get.do")
+    @RequestMapping("/getall.do")
     public void showUser(){
         List<User> u = uService.showUser();
         System.out.println(u.toString());
