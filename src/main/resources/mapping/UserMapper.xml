@@ -16,8 +16,8 @@
 <!--</mapper>-->
 <mapper namespace="hospitalServer.dao.UserDao" >
 
-    <select id="showUser" resultType="hospitalServer.bean.User">
-        SELECT * FROM t_user
+    <select id="getUser" parameterType="java.lang.String" resultType="hospitalServer.bean.User">
+        SELECT * FROM t_user WHERE id=#{id}
     </select>
 
 </mapper>

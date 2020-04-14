@@ -4,6 +4,6 @@
     <title>Title</title>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/uus/get.do">=-=</a>
+<a href="${pageContext.request.contextPath}/user/getall">=-=</a>
 </body>
 </html>

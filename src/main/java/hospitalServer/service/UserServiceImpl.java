@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService{
     @Autowired
     private UserDao uDao;
 
-    public List<User> showUser() {
-        return uDao.showUser();
+    public User getUser(String id) {
+        return uDao.getUser(id);
     }
 }

@@ -12,5 +12,5 @@ import java.util.List;
  **/
 
 public interface UserService {
-    List<User> showUser();
+    User getUser(String id);
 }

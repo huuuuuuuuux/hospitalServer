@@ -26,9 +26,8 @@ public class UserDaoTest {
     private  static final Logger LOG = Logger.getLogger(UserController.class);
     @Test
     public void showUsers() {
-        int id = 1;
-        List<User> user = userDao.showUser();
-        System.out.println(user.get(0).getId() + ":" + user.get(0).getName());
-        LOG.info("....==>"+user.get(0).getName());
+        String id = "1";
+        User user = userDao.getUser(id);
+        LOG.info("TEST: "+user.getName());
     }
 }
