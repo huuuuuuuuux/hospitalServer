@@ -8,48 +8,71 @@ package hospitalServer.bean;
  **/
 
 public class User {
-    private String id;
-    private String name;
-    private String age;
+    private String userId;
+    private String userPwd;
+    private String userName;
+    private int userAge;
+    private boolean userSex;
 
-    public User(String id, String name, String age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-    }
     public User() {
+    }
+
+    public User(String userId, String userPwd, String userName, int userAge, boolean userSex) {
+        this.userId = userId;
+        this.userPwd = userPwd;
+        this.userName = userName;
+        this.userAge = userAge;
+        this.userSex = userSex;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", age='" + age + '\'' +
+                "userId='" + userId + '\'' +
+                ", userPwd='" + userPwd + '\'' +
+                ", userName='" + userName + '\'' +
+                ", userAge=" + userAge +
+                ", userSex=" + userSex +
                 '}';
     }
 
-    public String getId() {
-        return id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public String getName() {
-        return name;
+    public String getUserPwd() {
+        return userPwd;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserPwd(String userPwd) {
+        this.userPwd = userPwd;
     }
 
-    public String getAge() {
-        return age;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setAge(String age) {
-        this.age = age;
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public int getUserAge() {
+        return userAge;
+    }
+
+    public void setUserAge(int userAge) {
+        this.userAge = userAge;
+    }
+
+    public boolean isUserSex() {
+        return userSex;
+    }
+
+    public void setUserSex(boolean userSex) {
+        this.userSex = userSex;
     }
 }

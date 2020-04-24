@@ -23,11 +23,11 @@ public class UserDaoTest {
     @Autowired
     private UserDao userDao;
 
-    private  static final Logger LOG = Logger.getLogger(UserController.class);
+    private static final Logger LOG = Logger.getLogger(UserController.class);
     @Test
-    public void showUsers() {
-        String id = "1";
+    public void login() {
+        String id = "123";
         User user = userDao.getUser(id);
-        LOG.info("TEST: "+user.getName());
+        LOG.info("TEST: "+user);
     }
 }
