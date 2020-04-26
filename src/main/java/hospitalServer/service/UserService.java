@@ -10,7 +10,6 @@ import java.util.List;
  * @description: hospitalServer.bean
  * @date:2020/3/27
  **/
-
 public interface UserService {
     User login(String id,String pwd);
     void register(User user);

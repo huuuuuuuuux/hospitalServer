@@ -18,12 +18,12 @@ import java.util.List;
  **/
 @Service
 public class UserServiceImpl implements UserService{
+    private static final Logger LOG = Logger.getLogger(UserServiceImpl.class);
     @Autowired
-    private UserDao uDao;
+    private UserDao userDao;
 
-    private static final Logger LOG = Logger.getLogger(UserController.class);
     public User login(String id,String pwd) {
-        User user = uDao.getUser(id);
+        User user = userDao.getUser(id);
         if (user != null )
             if(user.getUserPwd().equals(pwd))
                 return user;
@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService{
     }
 
     public void register(User user) {
-        uDao.register(user);
+        userDao.register(user);
     }
 
 
