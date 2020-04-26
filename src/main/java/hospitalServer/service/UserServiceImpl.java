@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService{
     @Autowired
     private UserDao uDao;
 
-    private  static final Logger LOG = Logger.getLogger(UserController.class);
+    private static final Logger LOG = Logger.getLogger(UserController.class);
     public User login(String id,String pwd) {
         User user = uDao.getUser(id);
         if (user != null )
@@ -33,4 +33,10 @@ public class UserServiceImpl implements UserService{
             LOG.info("用户不存在");
         return null;
     }
+
+    public void register(User user) {
+        uDao.register(user);
+    }
+
+
 }

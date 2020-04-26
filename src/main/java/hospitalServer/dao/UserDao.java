@@ -14,4 +14,5 @@ import java.util.List;
 @Repository
 public interface UserDao {
     User getUser(String id);
+    void register(User user);
 }

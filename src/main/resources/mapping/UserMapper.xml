@@ -20,4 +20,8 @@
         SELECT * FROM user WHERE user_id=#{id}
     </select>
 
+    <insert id="register" parameterType="hospitalServer.bean.User">
+        insert into user(user_id, user_pwd, user_name, user_age, user_sex) values(#{userId},#{userPwd},#{userName},#{userAge},#{userSex})
+    </insert>
+
 </mapper>

@@ -24,10 +24,22 @@ public class UserDaoTest {
     private UserDao userDao;
 
     private static final Logger LOG = Logger.getLogger(UserController.class);
+//    @Test
+//    public void login() {
+//        String id = "123";
+//        User user = userDao.getUser(id);
+//        LOG.info("TEST: "+user);
+//    }
     @Test
-    public void login() {
-        String id = "123";
-        User user = userDao.getUser(id);
+    public void register() {
+        User user = new User("aaa","bbb","ccc",8,true);
+        String id = "aaa";
+        String pwd = "bbb";
+        String name = "ccc";
+        int age = 8;
+        boolean sex = true;
+        userDao.register(user);
         LOG.info("TEST: "+user);
     }
+
 }
