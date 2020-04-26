@@ -9,28 +9,21 @@ package hospitalServer.bean;
 public class Report {
     private int rptId;
     private String userId;
+    private String rptTitle;
     private String rptContent;
 
     public Report() {
     }
 
-    public Report(int rptId, String userId, String rptContent) {
+    public Report(int rptId, String userId, String rptTitle, String rptContent) {
         this.rptId = rptId;
         this.userId = userId;
+        this.rptTitle = rptTitle;
         this.rptContent = rptContent;
     }
 
     public int getRptId() {
         return rptId;
-    }
-
-    @Override
-    public String toString() {
-        return "Report{" +
-                "rptId=" + rptId +
-                ", userId='" + userId + '\'' +
-                ", rptContent='" + rptContent + '\'' +
-                '}';
     }
 
     public void setRptId(int rptId) {
@@ -51,5 +44,22 @@ public class Report {
 
     public void setRptContent(String rptContent) {
         this.rptContent = rptContent;
+    }
+
+    public String getRptTitle() {
+        return rptTitle;
+    }
+
+    public void setRptTitle(String rptTitle) {
+        this.rptTitle = rptTitle;
+    }
+
+    @Override
+    public String toString() {
+        return "Report{" +
+                "rptId=" + rptId +
+                ", userId='" + userId + '\'' +
+                ", rptContent='" + rptContent + '\'' +
+                '}';
     }
 }

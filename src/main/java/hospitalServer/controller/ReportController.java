@@ -29,7 +29,7 @@ public class ReportController {
     private ReportService reportService;
 
 
-    @RequestMapping("/Login")
+    @RequestMapping("/getUserReport")
     public void Login(HttpServletResponse response,
                       @RequestParam(value="userId") String id) throws IOException {
         List<Report> reports = reportService.getUserReport(id);
@@ -42,10 +42,10 @@ public class ReportController {
             ServletOutputStream output = response.getOutputStream();
             byte[] dataByte = jsonObject.getBytes("UTF-8");
             output.write(dataByte);
-            LOG.info("成功" + reports);
+            LOG.info("获取体检报告成功" + reports);
         }
         else {
-            LOG.info("失败");
+            LOG.info("获取体检报告失败");
         }
     }
 }
