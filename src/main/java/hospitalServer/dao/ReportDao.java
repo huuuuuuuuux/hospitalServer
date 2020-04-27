@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * @author: create by XiaoHan
+ * @author: Huxley
  * @version: v1.0
  * @description: hospitalServer.dao
  * @date:2020/4/26

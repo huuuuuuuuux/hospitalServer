@@ -30,7 +30,7 @@
       <option name="IGNORE_JAVADOC_PERIOD" value="true" />
       <option name="IGNORE_DUPLICATED_THROWS" value="false" />
       <option name="IGNORE_POINT_TO_ITSELF" value="false" />
-      <option name="myAdditionalJavadocTags" value="author:,version:,description:,date:2020/3/27" />
+      <option name="myAdditionalJavadocTags" value="author:,version:,description:,date:2020/3/27,date:2020/4/26" />
     </inspection_tool>
   </profile>
 </component>
