@@ -12,13 +12,13 @@ public class Report {
     private int rptId;
     private String userId;
     private String rptTitle;
-    private Date rptDate;
+    private String rptDate;
     private String rptContent;
 
     public Report() {
     }
 
-    public Report(int rptId, String userId, String rptTitle, Date rptDate, String rptContent) {
+    public Report(int rptId, String userId, String rptTitle, String rptDate, String rptContent) {
         this.rptId = rptId;
         this.userId = userId;
         this.rptTitle = rptTitle;
@@ -58,11 +58,11 @@ public class Report {
         this.rptTitle = rptTitle;
     }
 
-    public Date getRptDate() {
+    public String getRptDate() {
         return rptDate;
     }
 
-    public void setRptDate(Date rptDate) {
+    public void setRptDate(String rptDate) {
         this.rptDate = rptDate;
     }
 
