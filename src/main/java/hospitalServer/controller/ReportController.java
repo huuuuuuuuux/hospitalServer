@@ -3,13 +3,13 @@ package hospitalServer.controller;
 import com.alibaba.fastjson.JSON;
 import hospitalServer.bean.Report;
 import hospitalServer.service.ReportService;
+import hospitalServer.util.Output;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
@@ -28,24 +28,11 @@ public class ReportController {
     @Autowired
     private ReportService reportService;
 
-
     @RequestMapping("/getUserReport")
     public void Login(HttpServletResponse response,
                       @RequestParam(value="userId") String id) throws IOException {
         List<Report> reports = reportService.getUserReport(id);
-        output(response, reports);
+        Output.output("加载体检报告", response, reports);
     }
 
-    private void output(HttpServletResponse response, List<Report> reports) throws IOException {
-        if(reports != null) {
-            String jsonObject = JSON.toJSONString(reports);
-            ServletOutputStream output = response.getOutputStream();
-            byte[] dataByte = jsonObject.getBytes("UTF-8");
-            output.write(dataByte);
-            LOG.info("获取体检报告成功" + reports);
-        }
-        else {
-            LOG.info("获取体检报告失败");
-        }
-    }
 }

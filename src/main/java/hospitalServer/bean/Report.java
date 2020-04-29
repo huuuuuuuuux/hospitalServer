@@ -1,5 +1,7 @@
 package hospitalServer.bean;
 
+import java.util.Date;
+
 /**
  * @author: Huxley
  * @version: v1.0
@@ -10,15 +12,17 @@ public class Report {
     private int rptId;
     private String userId;
     private String rptTitle;
+    private Date rptDate;
     private String rptContent;
 
     public Report() {
     }
 
-    public Report(int rptId, String userId, String rptTitle, String rptContent) {
+    public Report(int rptId, String userId, String rptTitle, Date rptDate, String rptContent) {
         this.rptId = rptId;
         this.userId = userId;
         this.rptTitle = rptTitle;
+        this.rptDate = rptDate;
         this.rptContent = rptContent;
     }
 
@@ -54,11 +58,21 @@ public class Report {
         this.rptTitle = rptTitle;
     }
 
+    public Date getRptDate() {
+        return rptDate;
+    }
+
+    public void setRptDate(Date rptDate) {
+        this.rptDate = rptDate;
+    }
+
     @Override
     public String toString() {
         return "Report{" +
                 "rptId=" + rptId +
                 ", userId='" + userId + '\'' +
+                ", rptTitle='" + rptTitle + '\'' +
+                ", rptDate=" + rptDate +
                 ", rptContent='" + rptContent + '\'' +
                 '}';
     }
