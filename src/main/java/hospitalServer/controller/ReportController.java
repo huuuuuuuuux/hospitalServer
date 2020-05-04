@@ -18,7 +18,6 @@ import java.util.List;
  * @author: Huxley
  * @version: v1.0
  * @description: hospitalServer.controller
- * @date:2020/4/26
  **/
 @Controller
 @RequestMapping("/report")

@@ -11,7 +11,6 @@ import java.io.IOException;
  * @author: Huxley
  * @version: v1.0
  * @description: hospitalServer.util
- * @date:2020/4/29
  **/
 public class Output {
     private  static final Logger LOG = Logger.getLogger(Output.class);

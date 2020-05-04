@@ -1,6 +1,6 @@
 package hospitalServer.dao;
 
-import hospitalServer.bean.Report;
+import hospitalServer.bean.Department;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,6 +11,6 @@ import java.util.List;
  * @description: hospitalServer.dao
  **/
 @Repository
-public interface ReportDao {
-    List<Report> getUserReport(String userId);
+public interface DepartmentDao {
+    List<Department> getAllDept();
 }

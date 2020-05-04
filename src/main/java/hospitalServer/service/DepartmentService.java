@@ -1,6 +1,6 @@
 package hospitalServer.service;
 
-import hospitalServer.bean.Report;
+import hospitalServer.bean.Department;
 
 import java.util.List;
 
@@ -9,6 +9,6 @@ import java.util.List;
  * @version: v1.0
  * @description: hospitalServer.service
  **/
-public interface ReportService {
-    List<Report> getUserReport(String userId);
+public interface DepartmentService {
+    List<Department> getAllDept();
 }

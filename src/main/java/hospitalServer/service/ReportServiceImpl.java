@@ -14,11 +14,9 @@ import java.util.List;
  * @author: Huxley
  * @version: v1.0
  * @description: hospitalServer.service
- * @date:2020/4/26
  **/
 @Service
 public class ReportServiceImpl implements ReportService{
-    private static final Logger LOG = Logger.getLogger(ReportServiceImpl.class);
     @Autowired
     private ReportDao reportDao;
 

@@ -6,7 +6,6 @@ import java.util.Date;
  * @author: Huxley
  * @version: v1.0
  * @description: hospitalServer.bean
- * @date:2020/4/26
  **/
 public class Report {
     private int rptId;

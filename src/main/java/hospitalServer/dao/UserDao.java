@@ -9,7 +9,6 @@ import java.util.List;
  * @author: Huxley
  * @version: v1.0
  * @description: hospitalServer.bean
- * @date:2020/3/27
  **/
 @Repository
 public interface UserDao {
