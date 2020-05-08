@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="hospitalServer.dao.ScheduleDao" >
+
+    <select id="getSchByDept" parameterType="java.lang.Integer" resultType="hospitalServer.bean.Schedule">
+        SELECT * FROM schedule WHERE dept_id=#{deptId}
+    </select>
+    <select id="getSchByDr" parameterType="java.lang.Integer" resultType="hospitalServer.bean.Schedule">
+        SELECT * FROM schedule WHERE dr_id=#{drId}
+    </select>
+
+</mapper>
