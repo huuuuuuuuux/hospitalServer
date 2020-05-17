@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="hospitalServer.dao.RegistrationDao" >
+
+    <insert id="newRegister" parameterType="hospitalServer.bean.Registration">
+        insert into registration(reg_id, user_id, sch_id, reg_rank) values(#{regId},#{userId},#{schId},#{regRank})
+    </insert>
+
+    <update id="addPatient" parameterType="hospitalServer.bean.Schedule">
+        update schedule set sch_remg_pos=#{schRemgPos} where sch_id=#{schId}
+    </update>
+
+    <select id="getRegPosTotal" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+        SELECT sch_total_pos FROM schedule WHERE sch_id=#{schId}
+    </select>
+
+    <select id="getRegPosRemg" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+        SELECT sch_remg_pos FROM schedule WHERE sch_id=#{schId}
+    </select>
+
+</mapper>
